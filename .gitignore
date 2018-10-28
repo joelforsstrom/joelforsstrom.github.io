@@ -1,0 +1,19 @@
+# Ignore OSX file system junk
+.DS_Store
+
+# Ignore Visual Studio configs
+.vscode
+
+# Don't include whole svn repositories
+.svn
+
+# Libraries installed by Composer, Bower etc
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+## If switching branches locally from gh-pages branch
+_site
+.sass-cache

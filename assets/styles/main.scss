@@ -520,12 +520,28 @@ ul,
     margin-bottom: 1.6rem;
 }
 
-.main-image {
-    text-align: center;
+.main-image__img {
+  display: none;
+  max-width: 17rem;
+
+  @media (min-width: 42em) {
+    display: block;
+  }
 }
 
-.main-image__img {
-    max-width: 17rem;
+.main-image__img + .main-image__img {
+  margin-top: 1.6rem;
+}
+
+.lead-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+  margin-bottom: 1.6rem;
+
+  @media (min-width: 42em) {
+    display: none;
+  }
 }
 
 .site-header {

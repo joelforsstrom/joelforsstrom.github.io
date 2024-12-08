@@ -17,3 +17,6 @@ node_modules
 ## If switching branches locally from gh-pages branch
 _site
 .sass-cache
+
+# Ignore IntelliJ project files
+.idea

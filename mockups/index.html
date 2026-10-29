@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Joel Forsström – designförslag</title>
+<style>
+  :root { --bg: #f4f2ee; --fg: #161616; --muted: #5d5d5d; --card: #fff; --rule: #ddd; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #151515; --fg: #eee; --muted: #aaa; --card: #1f1f1f; --rule: #333; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 1rem/1.6 system-ui, sans-serif; }
+  main { max-width: 72rem; margin: 0 auto; padding: 3rem 1rem; }
+  h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); margin: 0 0 .5rem; }
+  .intro { color: var(--muted); max-width: 44em; }
+  .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); margin-top: 2.5rem; }
+  .card { background: var(--card); border: 1px solid var(--rule); display: flex; flex-direction: column; }
+  .swatch { height: 11rem; display: flex; align-items: flex-end; padding: 1.25rem; background-size: cover; background-position: center 30%; }
+  .swatch span { font-size: 2rem; line-height: 1; }
+  .a .swatch { background: #f7f2e8; color: #1f1b16; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; border-bottom: 1px solid #d9cfbd; }
+  .b .swatch { background-image: linear-gradient(90deg, rgba(14,13,12,.9), rgba(14,13,12,.1)), url(shared/img/tamino-aria.jpg); color: #f1ebe0; font-family: "Bodoni Moda", Didot, serif; }
+  .c .swatch { background: #fff; color: #121212; font-family: "DM Serif Display", Georgia, serif; border-bottom: 3px solid #b3261e; }
+  .body { padding: 1.25rem; flex: 1; }
+  .body h2 { margin: 0 0 .25rem; font-size: 1.2rem; }
+  .body p { margin: 0 0 1rem; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: .5rem 1rem; font-size: .95rem; }
+  .links a { color: inherit; }
+  .notes { margin-top: 3rem; color: var(--muted); font-size: .95rem; max-width: 44em; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Bodoni+Moda:opsz,wght@6..96,500&family=DM+Serif+Display&display=swap">
+</head>
+<body>
+<main>
+  <h1>Joel Forsström – designförslag</h1>
+  <p class="intro">Tre stilriktningar för den nya webbplatsen. Alla har samma innehåll och samma fyra sidor (hem, biografi, media och CV) på svenska och finska. Längst upp på varje sida finns ett reglage för att byta stil och jämföra samma sida.</p>
+  <div class="grid">
+    <article class="card a"><div class="swatch"><span>Joel Forsström</span></div><div class="body">
+      <h2>A · Klassisk</h2><p>Som ett konsertprogram: elfenbensvitt papper, serifftypsnitt och en återhållsam guldton. Lugn, elegant och tidlös.</p>
+      <div class="links"><a href="a/sv/index.html">Svenska</a><a href="a/fi/index.html">Suomi</a><a href="a/sv/cv.html">CV</a></div></div></article>
+    <article class="card b"><div class="swatch"><span>Joel Forsström</span></div><div class="body">
+      <h2>B · Scen</h2><p>Mörk och dramatisk, med föreställningsbilder i full bredd, en mässingsfärgad accent och stor Bodoni-rubrik. Bilderna står i centrum.</p>
+      <div class="links"><a href="b/sv/index.html">Svenska</a><a href="b/fi/index.html">Suomi</a><a href="b/sv/cv.html">CV</a></div></div></article>
+    <article class="card c"><div class="swatch"><span>Joel Forsström</span></div><div class="body">
+      <h2>C · Modern</h2><p>Vitt och luftigt, med en överdimensionerad seriff mot en ren sans-serif, en röd accent och ett asymmetriskt raster.</p>
+      <div class="links"><a href="c/sv/index.html">Svenska</a><a href="c/fi/index.html">Suomi</a><a href="c/sv/cv.html">CV</a></div></div></article>
+  </div>
+  <p class="notes">Detta är skisser. Texter, bildtexter och CV-uppgifter kommer från det nya materialet; bildtexterna är gissningar som Joel bör kontrollera. Den valda stilen byggs sedan ut så att Joel kan redigera innehållet själv.</p>
+</main>
+</body>
+</html>

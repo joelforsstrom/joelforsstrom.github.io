@@ -1,0 +1,45 @@
+/* A · Classic editorial: a concert programme on ivory paper. */
+:root {
+  --bg: #f7f2e8; --fg: #1f1b16; --muted: #6b6155; --accent: #7a5a24; --rule: #d9cfbd; --surface: #efe7d8;
+  --font-display: "Cormorant Garamond", Georgia, serif; --font-body: "Source Serif 4", Georgia, serif;
+  --max: 68rem;
+}
+body { font-size: 1.05rem; }
+h1, h2, h3 { font-weight: 500; }
+.site-header { flex-direction: column; gap: .6rem; text-align: center; padding-block: 2.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
+.brand { margin: 0; font-size: 2rem; letter-spacing: .04em; }
+.brand-voice { display: block; font-style: italic; font-size: .55em; letter-spacing: .3em; text-transform: uppercase; }
+.main-nav { gap: .25rem 2rem; font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; justify-content: center; }
+.main-nav a[aria-current] { border-bottom-color: var(--accent); }
+.lang-nav { justify-content: center; font-style: italic; }
+.btn { letter-spacing: .08em; }
+
+.hero { padding-block: 3.5rem 4rem; align-items: center; }
+@media (min-width: 52rem) { .hero { grid-template-columns: 1fr 1fr; gap: 4rem; } .hero-text { order: -1; } }
+.hero-media { position: relative; max-width: 30rem; justify-self: center; }
+.hero-media::before { content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; border: 1px solid var(--accent); }
+.hero-media img { position: relative; }
+.hero h1 { font-size: clamp(3rem, 7vw, 5rem); font-style: italic; }
+.lead { font-size: 1.25rem; font-style: italic; color: var(--muted); }
+
+.news, .featured, .contact, .page-head { text-align: center; }
+.news h2, .featured h2, .contact h2, .cv h2, .videos h2, .gallery h2 { font-size: 2.2rem; }
+.news h2::after, .featured h2::after, .contact h2::after, .page-head h1::after {
+  content: "❦"; display: block; font-size: 1rem; color: var(--accent); margin-top: .6rem; }
+.news { border-top: 1px solid var(--rule); }
+.news-list { text-align: center; gap: 0; }
+.news-item { padding: 0 1.5rem; }
+@media (min-width: 52rem) { .news-item + .news-item { border-left: 1px solid var(--rule); } }
+.news-item h3 { font-size: 1.6rem; font-style: italic; }
+.featured { text-align: left; background: var(--surface); }
+.featured h2 { text-align: left; }
+.featured h2::after { margin-left: 0; text-align: left; }
+.strip { padding-top: 3rem; }
+.strip img { filter: sepia(.15); }
+.contact-links { justify-content: center; }
+.site-footer { text-align: center; background: var(--surface); }
+.prose { font-size: 1.08rem; }
+.prose p:first-child::first-letter { float: left; font-family: var(--font-display); font-size: 4.2em; line-height: .8; padding: .08em .1em 0 0; color: var(--accent); }
+.bio-figure img { border: 1px solid var(--rule); padding: .5rem; background: #fff; }
+.cv-table th { border-bottom-color: var(--accent); }
+.cv-role { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; }

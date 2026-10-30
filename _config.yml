@@ -10,4 +10,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - backlog
-  - tools

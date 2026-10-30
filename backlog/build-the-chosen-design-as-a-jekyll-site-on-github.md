@@ -18,5 +18,5 @@ Update 2026-10-30, decisions from the mockup review (mockups/ on branch mockups-
 - "Aktuellt" on the home page is off by default and controlled by one setting (see the CMS item).
 - Lightbox: PhotoSwipe 5.4.4 (MIT), vendored in shared/vendor/photoswipe, with the labels and caption in site.js.
 - Video thumbnails are self-hosted so nothing contacts YouTube before play; new videos need a thumbnail too.
-- The CV PDFs come from print_cv.py and the print stylesheet.
+- The downloadable CVs are Joel's own PDFs in assets/cv/.
 - Consider self-hosting the fonts instead of loading Google Fonts, which sends visitor IPs to Google.

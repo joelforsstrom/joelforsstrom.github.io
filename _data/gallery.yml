@@ -4,70 +4,70 @@ items:
       sv: "Joel som Tamino sjunger med utsträckta armar"
       fi: "Joel Taminona laulaa kädet levällään"
     caption:
-      sv: "Tamino, Trollflöjten"
-      fi: "Tamino, Taikahuilu"
+      sv: ""
+      fi: ""
     crop: "78% 40%"
   - image: "/assets/images/monostatos-aland.jpg"
     alt:
       sv: "Joel som Monostatos på knä framför kören på en utomhusscen"
       fi: "Joel Monostatoksena polvillaan kuoron edessä ulkonäyttämöllä"
     caption:
-      sv: "Monostatos, Trollflöjten, Ålands Operafestival"
-      fi: "Monostatos, Taikahuilu, Ålands Operafestival"
+      sv: ""
+      fi: ""
     crop: "42% 62%"
   - image: "/assets/images/karmelitsystrarna.jpg"
     alt:
       sv: "Joel i svart rock knäböjer bredvid en nunna på en mörk scen"
       fi: "Joel mustassa takissa polvillaan nunnan vieressä pimeällä näyttämöllä"
     caption:
-      sv: "Förste kommissarien, Karmelitsystrarna, Finlands Nationalopera"
-      fi: "Ensimmäinen komissaari, Karmeliittasisaret, Suomen Kansallisooppera"
+      sv: ""
+      fi: ""
     crop: "58% 45%"
   - image: "/assets/images/tamino-flojt.jpg"
     alt:
       sv: "Joel som Tamino med trollflöjten i händerna"
       fi: "Joel Taminona taikahuilu käsissään"
     caption:
-      sv: "Tamino, Trollflöjten"
-      fi: "Tamino, Taikahuilu"
+      sv: ""
+      fi: ""
     crop: "50% 30%"
   - image: "/assets/images/nemorino-3.jpg"
     alt:
       sv: "Joel sjunger mot svart bakgrund"
       fi: "Joel laulaa mustaa taustaa vasten"
     caption:
-      sv: "Nemorino, Kärleksdrycken, Dala-Floda Operafest"
-      fi: "Nemorino, Lemmenjuoma, Dala-Floda Operafest"
+      sv: ""
+      fi: ""
     crop: "52% 40%"
   - image: "/assets/images/nemorino-1.jpg"
     alt:
       sv: "Joel i hängselbyxor med en kvinna i röda glasögon lutad mot ryggen"
       fi: "Joel haalareissa, punasankainen nainen nojaa hänen selkäänsä"
     caption:
-      sv: "Nemorino, Kärleksdrycken"
-      fi: "Nemorino, Lemmenjuoma"
+      sv: ""
+      fi: ""
     crop: "60% 35%"
   - image: "/assets/images/nemorino-2.jpg"
     alt:
       sv: "Joel ler förväntansfullt med en flaska i handen"
       fi: "Joel hymyilee odottavasti pullo kädessään"
     caption:
-      sv: "Nemorino, Kärleksdrycken"
-      fi: "Nemorino, Lemmenjuoma"
+      sv: ""
+      fi: ""
     crop: "50% 45%"
   - image: "/assets/images/peruk.jpg"
     alt:
       sv: "Joel i 1700-talsperuk och kostym"
       fi: "Joel 1700-luvun peruukissa ja puvussa"
     caption:
-      sv: "I kostym och peruk"
-      fi: "Puvussa ja peruukissa"
+      sv: ""
+      fi: ""
     crop: "50% 40%"
   - image: "/assets/images/portratt-2021.jpg"
     alt:
       sv: "Porträtt av Joel Forsström i höstlöv"
       fi: "Muotokuva Joel Forsströmistä syksyisessä puistossa"
     caption:
-      sv: "Porträtt"
-      fi: "Muotokuva"
+      sv: ""
+      fi: ""
     crop: "50% 28%"

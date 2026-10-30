@@ -23,7 +23,7 @@ The result is in `_site/`.
 
 ## CV PDFs
 
-`tools/print_cv.py` prints the CV pages of a locally served build to `assets/cv/`; see the top of that file. Update them whenever `_data/cv.yml` changes.
+`assets/cv/` holds Joel's own CV files. They are separate from `_data/cv.yml`, so replace them when the CV changes.
 
 ## Privacy
 

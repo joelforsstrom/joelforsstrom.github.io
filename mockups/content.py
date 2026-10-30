@@ -3,6 +3,9 @@
 In the real site this becomes Jekyll data files that Sveltia CMS edits.
 """
 
+# Off by default: "Aktuellt" only shows when Joel turns it on in the CMS.
+SHOW_NEWS = False
+
 EMAIL = "joel.forsstrom@gmail.com"
 PHONE = "+358 40 745 6054"
 PHONE_HREF = "+358407456054"
@@ -10,6 +13,8 @@ PHONE_HREF = "+358407456054"
 UI = {
     "sv": {
         "lang_name": "Svenska",
+        "bar": {"label": "Mockup", "palette": "Färg", "font": "Typsnitt", "news": "Visa Aktuellt"},
+        "lang_label": "Språk",
         "voice": "tenor",
         "nav": {"index": "Hem", "bio": "Biografi", "media": "Media", "cv": "CV"},
         "titles": {"index": "Joel Forsström – tenor", "bio": "Biografi", "media": "Media", "cv": "CV"},
@@ -23,10 +28,8 @@ UI = {
         "contact": "Kontakt och förfrågningar",
         "contact_lead": "Joel anlitas gärna för opera, konserter, kyrkomusik och högtidliga tillställningar.",
         "download_cv": "Ladda ner CV (PDF)",
-        "print_cv": "Skriv ut",
         "play": "Spela upp",
-        "cv_intro": "Roller, engagemang och utbildning.",
-        "director": "Regi",
+                "director": "Regi",
         "conductor": "Dirigent",
         "cv_headers": {"roles": "Roller", "chorus": "Operakorist", "concert": "Solist i konsert och kyrka",
                         "education": "Utbildning", "teachers": "Pedagoger", "masterclasses": "Masterclasser"},
@@ -35,6 +38,8 @@ UI = {
     },
     "fi": {
         "lang_name": "Suomi",
+        "bar": {"label": "Mockup", "palette": "Väri", "font": "Fontti", "news": "Näytä Ajankohtaista"},
+        "lang_label": "Kieli",
         "voice": "tenori",
         "nav": {"index": "Etusivu", "bio": "Biografia", "media": "Media", "cv": "CV"},
         "titles": {"index": "Joel Forsström – tenori", "bio": "Biografia", "media": "Media", "cv": "Ansioluettelo"},
@@ -48,10 +53,8 @@ UI = {
         "contact": "Yhteydenotot ja tiedustelut",
         "contact_lead": "Joel esiintyy mielellään oopperassa, konserteissa, kirkkomusiikkitilaisuuksissa ja juhlissa.",
         "download_cv": "Lataa ansioluettelo (PDF)",
-        "print_cv": "Tulosta",
         "play": "Toista",
-        "cv_intro": "Roolit, kiinnitykset ja koulutus.",
-        "director": "Ohjaus",
+                "director": "Ohjaus",
         "conductor": "Kapellimestari",
         "cv_headers": {"roles": "Roolit", "chorus": "Oopperakuorolainen", "concert": "Konsertti- ja kirkkosolisti",
                         "education": "Koulutus", "teachers": "Laulupedagogit", "masterclasses": "Mestarikurssit"},
@@ -121,31 +124,31 @@ VIDEOS = [
 
 # Photo captions are educated guesses from the CV; Joel should confirm them.
 PHOTOS = {
-    "portratt-2021": {"w": 800, "h": 1200,
+    "portratt-2021": {"w": 800, "h": 1200, "pos": "50% 28%",
         "alt": {"sv": "Porträtt av Joel Forsström i höstlöv", "fi": "Muotokuva Joel Forsströmistä syksyisessä puistossa"},
         "cap": {"sv": "Porträtt", "fi": "Muotokuva"}},
-    "tamino-aria": {"w": 2048, "h": 1365,
+    "tamino-aria": {"w": 2048, "h": 1365, "pos": "78% 40%",
         "alt": {"sv": "Joel som Tamino sjunger med utsträckta armar", "fi": "Joel Taminona laulaa kädet levällään"},
         "cap": {"sv": "Tamino, Trollflöjten", "fi": "Tamino, Taikahuilu"}},
-    "tamino-flojt": {"w": 952, "h": 960,
+    "tamino-flojt": {"w": 952, "h": 960, "pos": "50% 30%",
         "alt": {"sv": "Joel som Tamino med trollflöjten i händerna", "fi": "Joel Taminona taikahuilu käsissään"},
         "cap": {"sv": "Tamino, Trollflöjten", "fi": "Tamino, Taikahuilu"}},
-    "monostatos-aland": {"w": 2048, "h": 1365,
+    "monostatos-aland": {"w": 2048, "h": 1365, "pos": "42% 62%",
         "alt": {"sv": "Joel som Monostatos på knä framför kören på en utomhusscen", "fi": "Joel Monostatoksena polvillaan kuoron edessä ulkonäyttämöllä"},
         "cap": {"sv": "Monostatos, Trollflöjten, Ålands Operafestival", "fi": "Monostatos, Taikahuilu, Ålands Operafestival"}},
-    "karmelitsystrarna": {"w": 2048, "h": 1365,
+    "karmelitsystrarna": {"w": 2048, "h": 1365, "pos": "58% 45%",
         "alt": {"sv": "Joel i svart rock knäböjer bredvid en nunna på en mörk scen", "fi": "Joel mustassa takissa polvillaan nunnan vieressä pimeällä näyttämöllä"},
         "cap": {"sv": "Förste kommissarien, Karmelitsystrarna, Finlands Nationalopera", "fi": "Ensimmäinen komissaari, Karmeliittasisaret, Suomen Kansallisooppera"}},
-    "nemorino-3": {"w": 2000, "h": 1400,
+    "nemorino-3": {"w": 2000, "h": 1400, "pos": "52% 40%",
         "alt": {"sv": "Joel sjunger mot svart bakgrund", "fi": "Joel laulaa mustaa taustaa vasten"},
         "cap": {"sv": "Nemorino, Kärleksdrycken, Dala-Floda Operafest", "fi": "Nemorino, Lemmenjuoma, Dala-Floda Operafest"}},
-    "nemorino-1": {"w": 1598, "h": 2000,
+    "nemorino-1": {"w": 1598, "h": 2000, "pos": "60% 35%",
         "alt": {"sv": "Joel i hängselbyxor med en kvinna i röda glasögon lutad mot ryggen", "fi": "Joel haalareissa, punasankainen nainen nojaa hänen selkäänsä"},
         "cap": {"sv": "Nemorino, Kärleksdrycken", "fi": "Nemorino, Lemmenjuoma"}},
-    "nemorino-2": {"w": 1572, "h": 2000,
+    "nemorino-2": {"w": 1572, "h": 2000, "pos": "50% 45%",
         "alt": {"sv": "Joel ler förväntansfullt med en flaska i handen", "fi": "Joel hymyilee odottavasti pullo kädessään"},
         "cap": {"sv": "Nemorino, Kärleksdrycken", "fi": "Nemorino, Lemmenjuoma"}},
-    "peruk": {"w": 2035, "h": 2048,
+    "peruk": {"w": 2035, "h": 2048, "pos": "50% 40%",
         "alt": {"sv": "Joel i 1700-talsperuk och kostym", "fi": "Joel 1700-luvun peruukissa ja puvussa"},
         "cap": {"sv": "I kostym och peruk", "fi": "Puvussa ja peruukissa"}},
 }

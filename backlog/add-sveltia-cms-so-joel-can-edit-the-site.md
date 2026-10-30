@@ -10,3 +10,5 @@ tags: [cms]
 ---
 
 admin/index.html (Sveltia from CDN, pinned version) and admin/config.yml with collections for bio (sv/fi), news, videos, CV data, gallery, and media uploads incl. the CV PDF. Login: GitHub personal access token for a start; optional sveltia-cms-auth Cloudflare Worker + GitHub OAuth app (human's step). Write a short Swedish guide for Joel.
+
+Update 2026-10-30: add a "Visa Aktuellt" on/off setting (default off) so Joel can show or hide the home page news section; the news entries stay stored while it is off. The gallery is an even 3-column grid, so note in Joel's guide that a multiple of three photos fills it evenly on desktop.

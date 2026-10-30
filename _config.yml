@@ -1,0 +1,13 @@
+title: Joel Forsström
+url: https://joelforsstrom.com
+baseurl: ""
+repository: joelforsstrom/joelforsstrom.github.io
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - backlog
+  - tools

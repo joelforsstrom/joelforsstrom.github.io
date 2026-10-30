@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign t = site.data.labels[page.lang] -%}
+{%- assign h = site.data.home -%}
+<section class="hero">
+  <div class="hero-media"><img src="{{ h.hero_image | relative_url }}" alt="{{ h.hero_alt[page.lang] | escape }}"></div>
+  <div class="hero-text">
+    <p class="eyebrow">{{ t.voice }}</p>
+    <h1>Joel Forsström</h1>
+    <p class="lead">{{ h.lead[page.lang] }}</p>
+    <p class="actions"><a class="btn" href="{{ site.data.routes.bio[page.lang] | relative_url }}">{{ t.read_bio }}</a> <a class="btn btn--ghost" href="{{ site.data.routes.cv[page.lang] | relative_url }}">{{ t.see_cv }}</a></p>
+  </div>
+</section>
+{%- if site.data.settings.show_news %}
+<section class="news">
+  <h2>{{ t.news }}</h2>
+  <ul class="news-list">
+    {%- for n in site.data.news.items %}
+    <li class="news-item"><p class="news-when">{{ n.when[page.lang] }}</p><h3>{{ n.title[page.lang] }}</h3><p>{{ n.text[page.lang] }}</p></li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+<section class="featured">
+  <div class="featured-text">
+    <h2>{{ t.featured }}</h2>
+    {{ h.featured_text[page.lang] | markdownify }}
+    <p><a class="more" href="{{ site.data.routes.media[page.lang] | relative_url }}">{{ t.all_media }} →</a></p>
+  </div>
+  {%- assign featured = site.data.videos.items | first %}
+  {% include video.html video=featured %}
+</section>
+<section class="strip" aria-label="{{ t.photos }}">
+  {%- for p in h.strip %}
+  <a href="{{ site.data.routes.media[page.lang] | relative_url }}#bilder"><img src="{{ p.image | relative_url }}" alt="{{ p.alt[page.lang] | escape }}" loading="lazy"></a>
+  {%- endfor %}
+</section>

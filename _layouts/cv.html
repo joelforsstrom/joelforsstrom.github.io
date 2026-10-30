@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{%- assign t = site.data.labels[page.lang] -%}
+{%- assign h = t.cv_headers -%}
+{%- assign c = t.cols -%}
+{%- assign cv = site.data.cv -%}
+<section class="page-head cv-head">
+  <p class="print-only print-name">Joel Forsström, {{ t.voice }}</p>
+  <h1>{{ t.titles.cv }}</h1>
+  <p class="print-only">{{ site.data.settings.email }} · {{ site.data.settings.phone }}</p>
+  <p class="actions no-print"><a class="btn" href="{{ site.data.settings.cv_pdf[page.lang] | relative_url }}" download>{{ t.download_cv }}</a></p>
+</section>
+<section class="cv">
+  <h2>{{ h.roles }}</h2>
+  <table class="cv-table cv-table--roles">
+    <thead><tr><th>{{ c.year }}</th><th>{{ c.role }}</th><th>{{ c.work }}</th><th>{{ c.venue }}</th></tr></thead>
+    <tbody>
+    {%- for r in cv.roles %}
+      <tr><td class="cv-year">{{ r.year }}</td><td class="cv-role">{{ r.role[page.lang] }}</td>
+        <td class="cv-work"><em>{{ r.work[page.lang] }}</em>{% if r.composer != '' %} <span class="cv-composer">{{ r.composer }}</span>{% endif %}</td>
+        <td class="cv-venue">{{ r.venue[page.lang] }}{% include cv-credits.html director=r.director conductor=r.conductor %}</td></tr>
+    {%- endfor %}
+    </tbody>
+  </table>
+  <h2>{{ h.concert }}</h2>
+  <table class="cv-table cv-table--concerts">
+    <thead><tr><th>{{ c.year }}</th><th>{{ c.work }}</th><th>{{ c.venue }}</th></tr></thead>
+    <tbody>
+    {%- for r in cv.concerts %}
+      <tr><td class="cv-year">{{ r.year }}</td>
+        <td class="cv-work"><em>{{ r.work[page.lang] }}</em> <span class="cv-composer">{{ r.composer }}</span></td>
+        <td class="cv-venue">{{ r.venue[page.lang] }}{% include cv-credits.html director="" conductor=r.conductor %}</td></tr>
+    {%- endfor %}
+    </tbody>
+  </table>
+  <h2>{{ h.chorus }}</h2>
+  <table class="cv-table cv-table--chorus">
+    <thead><tr><th>{{ c.year }}</th><th>{{ c.voice }}</th><th>{{ c.house }}</th></tr></thead>
+    <tbody>
+    {%- for r in cv.chorus %}
+      <tr><td class="cv-year">{{ r.year }}</td><td>{{ t.voice | capitalize }}</td><td>{{ r.house[page.lang] }}</td></tr>
+    {%- endfor %}
+    </tbody>
+  </table>
+  <div class="cv-cols">
+    <div>
+      <h2>{{ h.education }}</h2>
+      <ul class="cv-list">
+        {%- for e in cv.education %}
+        <li><span class="cv-year">{{ e.year }}</span> <span><strong>{{ e.subject[page.lang] }}</strong>, {{ e.school }}</span></li>
+        {%- endfor %}
+      </ul>
+      <p class="cv-teachers"><strong>{{ h.teachers }}:</strong> {{ cv.teachers }}</p>
+    </div>
+    <div>
+      <h2>{{ h.masterclasses }}</h2>
+      <ul class="cv-list">
+        {%- for m in cv.masterclasses %}
+        <li><span class="cv-year">{{ m.year }}</span> <span><strong>{{ m.teacher }}</strong>, {{ m.place[page.lang] }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

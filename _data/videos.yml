@@ -1,0 +1,41 @@
+items:
+  - youtube_id: "nYvQSebytp8"
+    thumbnail: "/assets/images/video/nYvQSebytp8.jpg"
+    title:
+      sv: "Una furtiva lagrima"
+      fi: "Una furtiva lagrima"
+    subtitle:
+      sv: "Nemorino, Kärleksdrycken (Donizetti)"
+      fi: "Nemorino, Lemmenjuoma (Donizetti)"
+  - youtube_id: "QvZrJAwomSg"
+    thumbnail: "/assets/images/video/QvZrJAwomSg.jpg"
+    title:
+      sv: "Tamino"
+      fi: "Tamino"
+    subtitle:
+      sv: "Trollflöjten (Mozart)"
+      fi: "Taikahuilu (Mozart)"
+  - youtube_id: "8dFgRcGA3tA"
+    thumbnail: "/assets/images/video/8dFgRcGA3tA.jpg"
+    title:
+      sv: "O helga natt"
+      fi: "O helga natt"
+    subtitle:
+      sv: "Adolphe Adam. Henrik Wikström, piano. Finlands Luciakröning 2022."
+      fi: "Adolphe Adam. Henrik Wikström, piano. Suomen Lucian kruunajaiset 2022."
+  - youtube_id: "R8RB0M-hF70"
+    thumbnail: "/assets/images/video/R8RB0M-hF70.jpg"
+    title:
+      sv: "Macduffs aria"
+      fi: "Macduffin aaria"
+    subtitle:
+      sv: "Macbeth (Verdi)"
+      fi: "Macbeth (Verdi)"
+  - youtube_id: "WQAxPE6s50k"
+    thumbnail: "/assets/images/video/WQAxPE6s50k.jpg"
+    title:
+      sv: "”Enemmän”"
+      fi: "”Enemmän”"
+    subtitle:
+      sv: "Jaakko Solas aria, Taipaleenjoki (Kuusisto)"
+      fi: "Jaakko Solan aaria, Taipaleenjoki-ooppera (Kuusisto)"

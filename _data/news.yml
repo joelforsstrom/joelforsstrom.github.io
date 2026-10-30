@@ -1,0 +1,28 @@
+items:
+  - when:
+      sv: "Hösten 2026"
+      fi: "Syksy 2026"
+    title:
+      sv: "The Shining – Malmö Opera"
+      fi: "The Shining – Malmö Opera"
+    text:
+      sv: "Europapremiären av Paul Moravecs opera, i regi av Keith Warner. Dirigent Patrik Ringborg."
+      fi: "Paul Moravecin oopperan Euroopan kantaesitys, ohjaus Keith Warner, kapellimestari Patrik Ringborg."
+  - when:
+      sv: "Somrarna 2025 och 2026"
+      fi: "Kesät 2025 ja 2026"
+    title:
+      sv: "Monostatos – Trollflöjten"
+      fi: "Monostatos – Taikahuilu"
+    text:
+      sv: "Ålands Operafestival. Kritikerrosad uppsättning i regi av Dan Karlström."
+      fi: "Ålands Operafestival. Kriitikoiden ylistämä tuotanto, ohjaus Dan Karlström."
+  - when:
+      sv: "Säsongen 2025/2026"
+      fi: "Kausi 2025/2026"
+    title:
+      sv: "Gäst i Köpenhamn och Malmö"
+      fi: "Vierailuja Kööpenhaminassa ja Malmössä"
+    text:
+      sv: "Det Kongelige Teater och Malmö Opera."
+      fi: "Det Kongelige Teater ja Malmö Opera."

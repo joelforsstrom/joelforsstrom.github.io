@@ -1,0 +1,7 @@
+{%- assign p = include.photo -%}
+<figure>
+  <img src="{{ p.image | relative_url }}" alt="{{ p.alt[page.lang] | escape }}" loading="lazy">
+  {%- if p.caption[page.lang] and p.caption[page.lang] != '' %}
+  <figcaption>{{ p.caption[page.lang] | escape }}</figcaption>
+  {%- endif %}
+</figure>

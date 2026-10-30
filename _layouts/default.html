@@ -1,0 +1,55 @@
+{%- assign t = site.data.labels[page.lang] -%}
+{%- assign s = site.data.settings -%}
+{%- assign routes = site.data.routes[page.ref] -%}
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.ref == 'home' %}{{ t.titles.index }}{% else %}{{ t.titles[page.ref] | default: '404' }} – Joel Forsström{% endif %}</title>
+<meta name="description" content="{{ site.data.home.lead[page.lang] | escape }}">
+{%- if routes %}
+<link rel="canonical" href="{{ routes[page.lang] | absolute_url }}">
+<link rel="alternate" hreflang="sv" href="{{ routes.sv | absolute_url }}">
+<link rel="alternate" hreflang="fi" href="{{ routes.fi | absolute_url }}">
+{%- endif %}
+<meta property="og:title" content="Joel Forsström – {{ t.voice }}">
+<meta property="og:description" content="{{ site.data.home.lead[page.lang] | escape }}">
+<meta property="og:image" content="{{ site.data.home.hero_image | absolute_url }}">
+<link rel="preload" href="{{ '/assets/fonts/cormorant-garamond-normal-500.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/source-serif-4-normal-400.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
+{%- if page.ref == 'media' %}
+<link rel="stylesheet" href="{{ '/assets/vendor/photoswipe/photoswipe.css' | relative_url }}">
+{%- endif %}
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="page-{{ page.ref }}">
+<header class="site-header">
+  <nav class="lang-nav" aria-label="{{ t.lang_label }}">
+    {%- for code in site.data.languages %}
+    <a href="{% if routes %}{{ routes[code] | relative_url }}{% else %}{{ site.data.routes.home[code] | relative_url }}{% endif %}" lang="{{ code }}" hreflang="{{ code }}"{% if code == page.lang %} aria-current="true"{% endif %}>{{ site.data.labels[code].lang_name }}</a>
+    {%- endfor %}
+  </nav>
+  <a class="brand" href="{{ site.data.routes.home[page.lang] | relative_url }}"><span class="brand-name">Joel Forsström</span> <span class="brand-voice">{{ t.voice }}</span></a>
+  <nav class="main-nav" aria-label="{{ t.nav.index }}">
+    <a href="{{ site.data.routes.home[page.lang] | relative_url }}"{% if page.ref == 'home' %} aria-current="page"{% endif %}>{{ t.nav.index }}</a>
+    <a href="{{ site.data.routes.bio[page.lang] | relative_url }}"{% if page.ref == 'bio' %} aria-current="page"{% endif %}>{{ t.nav.bio }}</a>
+    <a href="{{ site.data.routes.media[page.lang] | relative_url }}"{% if page.ref == 'media' %} aria-current="page"{% endif %}>{{ t.nav.media }}</a>
+    <a href="{{ site.data.routes.cv[page.lang] | relative_url }}"{% if page.ref == 'cv' %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
+  </nav>
+</header>
+<main>
+{{ content }}
+</main>
+<footer class="site-footer">
+  <section class="contact" id="kontakt">
+    <h2>{{ t.contact }}</h2>
+    <p class="contact-lead">{{ t.contact_lead }}</p>
+    <p class="contact-links"><a href="mailto:{{ s.email }}">{{ s.email }}</a> <a href="tel:{{ s.phone_link }}">{{ s.phone }}</a></p>
+  </section>
+  <p class="footer-meta"><a href="{{ s.cv_pdf[page.lang] | relative_url }}" download>{{ t.download_cv }}</a></p>
+</footer>
+<script type="module" src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

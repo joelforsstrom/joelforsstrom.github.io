@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{%- assign t = site.data.labels[page.lang] -%}
+<section class="page-head">
+  <h1>{{ t.titles.media }}</h1>
+</section>
+<section class="band band--videos" id="video">
+  <h2>{{ t.videos }}</h2>
+  <div class="video-grid">
+    {%- for v in site.data.videos.items %}
+    {% include video.html video=v %}
+    {%- endfor %}
+  </div>
+</section>
+<section class="band band--photos" id="bilder">
+  <h2>{{ t.photos }}</h2>
+  <div class="gallery-grid">
+    {%- for p in site.data.gallery.items %}
+    <a class="gallery-item" href="{{ p.image | relative_url }}" data-cropped="true" data-caption="{{ p.caption[page.lang] | escape }}"{% if p.crop %} style="--pos: {{ p.crop }}"{% endif %}><img src="{{ p.image | relative_url }}" alt="{{ p.alt[page.lang] | escape }}"></a>
+    {%- endfor %}
+  </div>
+</section>

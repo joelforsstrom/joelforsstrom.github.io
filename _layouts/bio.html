@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{%- assign b = site.data.bio -%}
+<section class="page-head">
+  <h1>{{ site.data.labels[page.lang].titles.bio }}</h1>
+</section>
+<section class="bio prose">
+  {{ b.text_1[page.lang] | markdownify }}
+  <div class="figure-pair">{% for p in b.photos_pair %}{% include photo.html photo=p %}{% endfor %}</div>
+  {{ b.text_2[page.lang] | markdownify }}
+  <div class="figure-wide">{% include photo.html photo=b.photo_wide %}</div>
+  {{ b.text_3[page.lang] | markdownify }}
+</section>

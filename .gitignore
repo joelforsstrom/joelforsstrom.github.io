@@ -20,3 +20,11 @@ _site
 
 # Ignore IntelliJ project files
 .idea
+
+# Claude Code worktrees
+.claude/worktrees/
+
+# Local Jekyll builds
+_site
+Gemfile.lock
+.jekyll-cache

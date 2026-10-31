@@ -1,0 +1,12 @@
+home:
+  sv: "/"
+  fi: "/fi/"
+bio:
+  sv: "/biografi/"
+  fi: "/fi/biografia/"
+media:
+  sv: "/media/"
+  fi: "/fi/media/"
+cv:
+  sv: "/cv/"
+  fi: "/fi/cv/"

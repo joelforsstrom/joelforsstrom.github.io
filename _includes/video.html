@@ -1,0 +1,9 @@
+{%- assign v = include.video -%}
+{%- assign vtitle = v.title[page.lang] | escape -%}
+<figure class="video">
+  <button class="video-facade" type="button" data-id="{{ v.youtube_id }}" aria-label="{{ site.data.labels[page.lang].play }}: {{ vtitle }}">
+    <img src="{% if v.thumbnail %}{{ v.thumbnail | relative_url }}{% else %}https://i.ytimg.com/vi/{{ v.youtube_id }}/hqdefault.jpg{% endif %}" alt="" loading="lazy">
+    <span class="video-play" aria-hidden="true"></span>
+  </button>
+  <figcaption><strong>{{ vtitle }}</strong> <span>{{ v.subtitle[page.lang] | escape }}</span></figcaption>
+</figure>

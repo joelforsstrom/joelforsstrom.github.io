@@ -1,0 +1,8 @@
+# Site settings. show_news turns the "Aktuellt" section on the home page on or off.
+show_news: false
+email: "joel.forsstrom@gmail.com"
+phone: "+358 40 745 6054"
+phone_link: "+358407456054"
+cv_pdf:
+  sv: "/assets/cv/joel-forsstrom-cv-sv.pdf"
+  fi: "/assets/cv/joel-forsstrom-cv-fi.pdf"

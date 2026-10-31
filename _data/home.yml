@@ -1,0 +1,23 @@
+lead:
+  sv: "Finlandssvensk lyrisk tenor, känd för sin klangfulla röst, sin varma scenpersonlighet och sin starka sceniska närvaro."
+  fi: "Suomenruotsalainen lyyrinen tenori, joka tunnetaan sointuvasta äänestään, lämpimästä esiintyjäpersoonastaan ja vahvasta näyttämöpresenssistään."
+hero_image: "/assets/images/portratt-2021.jpg"
+hero_alt:
+  sv: "Porträtt av Joel Forsström i höstlöv"
+  fi: "Muotokuva Joel Forsströmistä syksyisessä puistossa"
+featured_text:
+  sv: "Bland hans operaroller märks Tamino i Mozarts *Trollflöjten*, Nemorino i Donizettis *Kärleksdrycken*, prins Ramiro i Rossinis *Askungen* och Monostatos i *Trollflöjten*. På Finlands Nationalopera har han bland annat framträtt som Förste kommissarien i Poulencs *Karmelitsystrarna* och Andre nasaréen i Strauss *Salome*. Sommaren 2025 gestaltade han Monostatos i en kritikerrosad uppsättning av *Trollflöjten* på Ålands Operafestival, en produktion som återkom 2026."
+  fi: "Hänen oopperarooleihinsa kuuluvat muun muassa Tamino Mozartin *Taikahuilussa*, Nemorino Donizettin *Lemmenjuomassa*, prinssi Ramiro Rossinin *Tuhkimossa* sekä Monostatos *Taikahuilussa*. Suomen Kansallisoopperassa hän on esiintynyt muun muassa ensimmäisen komissaarin roolissa Poulencin *Karmeliittasisarissa* ja toisen nasarealaisen roolissa Straussin *Salomessa*. Kesällä 2025 Joel esitti Monostatosta Ålands Operafestivalin kriitikoiden ylistämässä *Taikahuilu*-tuotannossa, joka palasi ohjelmistoon kesällä 2026."
+strip:
+  - image: "/assets/images/monostatos-aland.jpg"
+    alt:
+      sv: "Joel som Monostatos på knä framför kören på en utomhusscen"
+      fi: "Joel Monostatoksena polvillaan kuoron edessä ulkonäyttämöllä"
+  - image: "/assets/images/karmelitsystrarna.jpg"
+    alt:
+      sv: "Joel i svart rock knäböjer bredvid en nunna på en mörk scen"
+      fi: "Joel mustassa takissa polvillaan nunnan vieressä pimeällä näyttämöllä"
+  - image: "/assets/images/tamino-flojt.jpg"
+    alt:
+      sv: "Joel som Tamino med trollflöjten i händerna"
+      fi: "Joel Taminona taikahuilu käsissään"

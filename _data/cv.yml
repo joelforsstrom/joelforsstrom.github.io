@@ -1,0 +1,365 @@
+roles:
+  - year: "2026"
+    role:
+      sv: "Maffiaguy 3"
+      fi: "Maffiaguy 3"
+    work:
+      sv: "The Shining"
+      fi: "The Shining"
+    composer: "P. Moravec"
+    venue:
+      sv: "Malmö Opera"
+      fi: "Malmön ooppera"
+    director: "Keith Warner"
+    conductor: "Patrik Ringborg"
+  - year: "2025–2026"
+    role:
+      sv: "Monostatos"
+      fi: "Monostatos"
+    work:
+      sv: "Trollflöjten"
+      fi: "Taikahuilu"
+    composer: "W. A. Mozart"
+    venue:
+      sv: "Ålands Operafestival"
+      fi: "Ålands Operafestival"
+    director: "Dan Karlström"
+    conductor: "Alberto Hold-Garrido"
+  - year: "2024"
+    role:
+      sv: "Andre nasaréen"
+      fi: "Toinen nasaretilainen"
+    work:
+      sv: "Salome"
+      fi: "Salome"
+    composer: "R. Strauss"
+    venue:
+      sv: "Finlands Nationalopera"
+      fi: "Suomen Kansallisooppera"
+    director: "Christof Loy"
+    conductor: "Hannu Lintu"
+  - year: "2024"
+    role:
+      sv: "Förste kommissarien"
+      fi: "Ensimmäinen komissaari"
+    work:
+      sv: "Karmelitsystrarna"
+      fi: "Karmeliittasisaret"
+    composer: "F. Poulenc"
+    venue:
+      sv: "Finlands Nationalopera"
+      fi: "Suomen Kansallisooppera"
+    director: "Olivier Py"
+    conductor: "Hannu Lintu"
+  - year: "2023"
+    role:
+      sv: "Nemorino"
+      fi: "Nemorino"
+    work:
+      sv: "Kärleksdrycken"
+      fi: "Lemmenjuoma"
+    composer: "G. Donizetti"
+    venue:
+      sv: "Dala-Floda Operafest"
+      fi: "Dala-Floda Operafest"
+    director: "Christina Ros"
+    conductor: "Miguel Ramos"
+  - year: "2022"
+    role:
+      sv: "Tamino"
+      fi: "Tamino"
+    work:
+      sv: "Trollflöjten"
+      fi: "Taikahuilu"
+    composer: "W. A. Mozart"
+    venue:
+      sv: "Skånska Operan"
+      fi: "Skånska Operan"
+    director: "Ola Hörling"
+    conductor: "Maria Ingemarsson Berg"
+  - year: "2021"
+    role:
+      sv: "Gherardo"
+      fi: "Gherardo"
+    work:
+      sv: "Gianni Schicchi"
+      fi: "Gianni Schicchi"
+    composer: "G. Puccini"
+    venue:
+      sv: "Musicum, Kungliga Akademiska Kapellet"
+      fi: "Musicum, Kungliga Akademiska Kapellet"
+    director: "Ulric Qvale"
+    conductor: "Stefan Karpe"
+  - year: "2021"
+    role:
+      sv: "Jaakko Sola"
+      fi: "Jaakko Sola"
+    work:
+      sv: "Taipaleenjoki"
+      fi: "Taipaleenjoki-ooppera"
+    composer: "I. Kuusisto"
+    venue:
+      sv: "OperArt, turné i Finland"
+      fi: "OperArt, Suomen-kiertue"
+    director: "Juulia Tapola"
+    conductor: "Mikk Murdvee"
+  - year: "2021"
+    role:
+      sv: "A-Rab och Glad Hand"
+      fi: "A-Rab & Glad Hand"
+    work:
+      sv: "West Side Story"
+      fi: "West Side Story"
+    composer: "L. Bernstein"
+    venue:
+      sv: "Savoyteatern, Helsingfors"
+      fi: "Savoy-teatteri, Helsinki"
+    director: "Tuomas Parkkinen"
+    conductor: "Jonas Rannila"
+  - year: "2021"
+    role:
+      sv: "Tenorsolist"
+      fi: "Tenorisolisti"
+    work:
+      sv: "Operaquiz"
+      fi: "Operaquiz"
+    composer: ""
+    venue:
+      sv: "Skånska Operan"
+      fi: "Skånska Operan"
+    director: "Ola Hörling"
+    conductor: ""
+  - year: "2020"
+    role:
+      sv: "Ramiro"
+      fi: "Ramiro"
+    work:
+      sv: "Askungen"
+      fi: "Tuhkimo"
+    composer: "G. Rossini"
+    venue:
+      sv: "Lemi musikfestspel"
+      fi: "Lemin musiikkijuhlat"
+    director: "Anselmi Hirvonen"
+    conductor: ""
+  - year: "2019"
+    role:
+      sv: "Jude 3"
+      fi: "3. juutalainen"
+    work:
+      sv: "Salome"
+      fi: "Salome"
+    composer: "R. Strauss"
+    venue:
+      sv: "Åbo filharmoniska orkester"
+      fi: "Turun filharmoninen orkesteri"
+    director: ""
+    conductor: "Leif Segerstam"
+  - year: "2019"
+    role:
+      sv: "Don José"
+      fi: "Don José"
+    work:
+      sv: "Carmen"
+      fi: "Carmen"
+    composer: "G. Bizet"
+    venue:
+      sv: "Lovisa operaförening"
+      fi: "Loviisan oopperayhdistys"
+    director: "Päivi Storgårds"
+    conductor: "Tomas Takolander"
+  - year: "2018"
+    role:
+      sv: "Amerikanska konsuln / ensemble"
+      fi: "Amerikkalainen konsuli / ensemble"
+    work:
+      sv: "Chess"
+      fi: "Chess"
+    composer: "B. Andersson / B. Ulvaeus"
+    venue:
+      sv: "Svenska Teatern, Helsingfors"
+      fi: "Svenska Teatern, Helsinki"
+    director: "Maria Sid"
+    conductor: "Kristian Nyman"
+  - year: "2018"
+    role:
+      sv: "Araldo, Conte di Lerma"
+      fi: "Araldo, Conte di Lerma"
+    work:
+      sv: "Don Carlo"
+      fi: "Don Carlo"
+    composer: "G. Verdi"
+    venue:
+      sv: "OperaBox / Helden Productions"
+      fi: "OperaBox / Helden Productions"
+    director: "Ville Saukkonen"
+    conductor: "Jonas Rannila"
+  - year: "2017"
+    role:
+      sv: "Tenorsolist i solokvartetten"
+      fi: "Tenorisolisti solistikvartetissa"
+    work:
+      sv: "Enleveringen ur seraljen"
+      fi: "Ryöstö seraljista"
+    composer: "W. A. Mozart"
+    venue:
+      sv: "Nyslotts operafestival"
+      fi: "Savonlinnan Oopperajuhlat"
+    director: "Katariina Lahti"
+    conductor: "Christoph Altstaedt"
+  - year: "2017"
+    role:
+      sv: "Micaëla (”Mikael”)"
+      fi: "Micaëla (”Mikael”)"
+    work:
+      sv: "Carmen"
+      fi: "Carmen"
+    composer: "G. Bizet"
+    venue:
+      sv: "Dala-Floda Operafest"
+      fi: "Dala-Floda Operafest"
+    director: "Lotta Lindqvist"
+    conductor: "Alexander Nordwall"
+  - year: "2016"
+    role:
+      sv: "Mengone"
+      fi: "Mengone"
+    work:
+      sv: "Apotekaren (Lo speziale)"
+      fi: "Apteekkari (Lo speziale)"
+    composer: "J. Haydn"
+    venue:
+      sv: "Savoyteatern, Helsingfors"
+      fi: "Savoy-teatteri, Helsinki"
+    director: "Ville Saukkonen"
+    conductor: "Tatu Erkkilä"
+  - year: "2016"
+    role:
+      sv: "En av poliserna / ensemble"
+      fi: "Poliisi / ensemble"
+    work:
+      sv: "Lady Macbeth från Mtsensk"
+      fi: "Mtsenskin Lady Macbeth"
+    composer: "D. Sjostakovitj"
+    venue:
+      sv: "Finlands Nationalopera"
+      fi: "Suomen Kansallisooppera"
+    director: "Ole Anders Tandberg"
+    conductor: "Oleg Caetani"
+concerts:
+  - year: "2024"
+    work:
+      sv: "Juloratorium"
+      fi: "Jouluoratorio"
+    composer: "C. Saint-Saëns"
+    venue:
+      sv: "Lovisa kyrka"
+      fi: "Loviisan kirkko"
+    conductor: "Tomas Takolander"
+  - year: "2022"
+    work:
+      sv: "O helga natt, tenorsolist"
+      fi: "O helga natt, tenorisolisti"
+    composer: "A. Adam"
+    venue:
+      sv: "Finlands Luciakröning, direktsänd i Yle"
+      fi: "Suomen Lucian kruunajaiset, suora lähetys Ylellä"
+    conductor: ""
+  - year: "2019"
+    work:
+      sv: "Matteuspassionen"
+      fi: "Matteus-passio"
+    composer: "J. S. Bach"
+    venue:
+      sv: "Haapavesi och Haapajärvi kyrkor"
+      fi: "Haapaveden ja Haapajärven kirkot"
+    conductor: "Timo Hannula"
+  - year: "2017"
+    work:
+      sv: "Juloratorium"
+      fi: "Jouluoratorio"
+    composer: "C. Saint-Saëns"
+    venue:
+      sv: "Mariakyrkan, Sigtuna"
+      fi: "Marian kirkko, Sigtuna"
+    conductor: "Mathias Kjellgren"
+  - year: "2016"
+    work:
+      sv: "Requiem"
+      fi: "Requiem"
+    composer: "W. A. Mozart"
+    venue:
+      sv: "Mejlans kyrka, Helsingfors"
+      fi: "Meilahden kirkko, Helsinki"
+    conductor: "Pete Vuorio"
+chorus:
+  - year: "2025–2026"
+    house:
+      sv: "Det Kongelige Teater, Köpenhamn"
+      fi: "Det Kongelige Teater, Kööpenhamina"
+  - year: "2025–2027"
+    house:
+      sv: "Malmö Opera"
+      fi: "Malmön ooppera"
+  - year: "2022–"
+    house:
+      sv: "Finlands Nationalopera"
+      fi: "Suomen Kansallisooppera"
+  - year: "2021"
+    house:
+      sv: "Kungliga Operan, Stockholm"
+      fi: "Kungliga Operan, Tukholma"
+  - year: "2019–2020"
+    house:
+      sv: "Göteborgsoperan"
+      fi: "Göteborgin ooppera"
+  - year: "2016–2018, 2021"
+    house:
+      sv: "Finlands Nationalopera"
+      fi: "Suomen Kansallisooppera"
+  - year: "2017"
+    house:
+      sv: "Folkoperan, Stockholm"
+      fi: "Folkoperan, Tukholma"
+  - year: "2013–2018"
+    house:
+      sv: "Nyslotts operafestival"
+      fi: "Savonlinnan Oopperajuhlat"
+education:
+  - year: "2014–2015"
+    subject:
+      sv: "Klassisk sång"
+      fi: "Klassinen laulu"
+    school: "Birkagårdens folkhögskola"
+  - year: "2011–2013"
+    subject:
+      sv: "Operasångare"
+      fi: "Oopperalaulaja"
+    school: "Operastudio Stockholm"
+  - year: "2010–2011"
+    subject:
+      sv: "Klassisk sång"
+      fi: "Klassinen laulu"
+    school: "Kulturama"
+teachers: "Mattias Danielsson, Franco Pomponi, Ron La Fond, Dale Fundling"
+masterclasses:
+  - year: "2025"
+    teacher: "Arwel T. Morgan"
+    place:
+      sv: "Skåne"
+      fi: "Skåne"
+  - year: "2020"
+    teacher: "Karita Mattila"
+    place:
+      sv: "Helsingfors"
+      fi: "Helsinki"
+  - year: "2019"
+    teacher: "Mikko Franck & Rilla Kyykkä"
+    place:
+      sv: "Kangasniemi"
+      fi: "Kangasniemi"
+  - year: "2019"
+    teacher: "Karita Mattila"
+    place:
+      sv: "Birgit Nilsson-museet"
+      fi: "Birgit Nilsson -museo"

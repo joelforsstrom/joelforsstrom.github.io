@@ -14,10 +14,10 @@ Website of tenor Joel Forsström, in Swedish and Finnish. It is a Jekyll site th
 
 Joel edits the site at `/admin/` with Sveltia CMS; see `docs/redigera-webbplatsen.md`. Saving commits directly to `master`, and GitHub Pages republishes. `admin/config.yml` defines the editing forms, and the Sveltia version is pinned in `admin/index.html`, with an integrity hash that must be replaced together with the version.
 
-Sign-in goes through [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth), a Cloudflare Worker that holds the GitHub OAuth app's secret:
+Sign-in goes through [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth), a Cloudflare Worker that holds the GitHub OAuth app's secret. It runs at the `base_url` in `admin/config.yml`, from a copy in the `joelforsstrom/sveltia-cms-auth` repo. To set it up again:
 
-1. In Cloudflare, deploy the Worker with the button in its README and copy its URL.
-2. In GitHub, [create an OAuth app](https://github.com/settings/applications/new) with homepage `https://joelforsstrom.com` and callback URL `<worker URL>/callback`, and generate a client secret.
+1. In Cloudflare, deploy the Worker with the button in its README, add the build variable `PNPM_VERSION` = `10.33.0` (the default pnpm 9 fails on its lockfile), and copy its URL.
+2. In GitHub, [create an OAuth app](https://github.com/settings/applications/new) with homepage `https://joelforsstrom.com` and callback URL `<worker URL>/callback`, leave "Expire user access tokens" unticked, and generate a client secret.
 3. In the Worker's settings, add `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (encrypted) and `ALLOWED_DOMAINS` set to `joelforsstrom.com`, then deploy.
 4. Set `base_url` to the Worker URL in `admin/config.yml`.
 

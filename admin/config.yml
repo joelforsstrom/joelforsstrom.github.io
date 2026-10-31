@@ -4,8 +4,7 @@ backend:
   repo: joelforsstrom/joelforsstrom.github.io
   branch: master
   auth_scope: public_repo
-  # Worker URL from the setup in README.md
-  # base_url: https://sveltia-cms-auth.SUBDOMAIN.workers.dev
+  base_url: https://sveltia-cms-auth.mats-tuovinen.workers.dev
 
 site_url: https://joelforsstrom.com
 media_folder: assets/images

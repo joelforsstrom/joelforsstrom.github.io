@@ -1,4 +1,4 @@
-show: true
+show: false
 items:
   - when:
       sv: "Hösten 2026"

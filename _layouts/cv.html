@@ -18,7 +18,7 @@ layout: default
     <tbody>
     {%- for r in cv.roles %}
       <tr><td class="cv-year">{{ r.year }}</td><td class="cv-role">{{ r.role[page.lang] }}</td>
-        <td class="cv-work"><em>{{ r.work[page.lang] }}</em>{% if r.composer != '' %} <span class="cv-composer">{{ r.composer }}</span>{% endif %}</td>
+        <td class="cv-work"><em>{{ r.work[page.lang] }}</em>{% if r.composer and r.composer != '' %} <span class="cv-composer">{{ r.composer }}</span>{% endif %}</td>
         <td class="cv-venue">{{ r.venue[page.lang] }}{% include cv-credits.html director=r.director conductor=r.conductor %}</td></tr>
     {%- endfor %}
     </tbody>
@@ -29,7 +29,7 @@ layout: default
     <tbody>
     {%- for r in cv.concerts %}
       <tr><td class="cv-year">{{ r.year }}</td>
-        <td class="cv-work"><em>{{ r.work[page.lang] }}</em> <span class="cv-composer">{{ r.composer }}</span></td>
+        <td class="cv-work"><em>{{ r.work[page.lang] }}</em>{% if r.composer and r.composer != '' %} <span class="cv-composer">{{ r.composer }}</span>{% endif %}</td>
         <td class="cv-venue">{{ r.venue[page.lang] }}{% include cv-credits.html director="" conductor=r.conductor %}</td></tr>
     {%- endfor %}
     </tbody>

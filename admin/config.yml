@@ -1,0 +1,333 @@
+# Sveltia CMS. Joel signs in at /admin/ with GitHub; saving commits to master and GitHub Pages republishes.
+backend:
+  name: github
+  repo: joelforsstrom/joelforsstrom.github.io
+  branch: master
+  auth_scope: public_repo
+  # Worker URL from the setup in README.md
+  # base_url: https://sveltia-cms-auth.SUBDOMAIN.workers.dev
+
+site_url: https://joelforsstrom.com
+media_folder: assets/images
+public_folder: /assets/images
+
+output:
+  yaml:
+    quote: double
+
+singletons:
+  - name: home
+    label: "Startsida"
+    file: _data/home.yml
+    fields:
+      - name: lead
+        label: "Ingress"
+        widget: object
+        fields:
+          - { name: sv, label: Svenska, widget: text }
+          - { name: fi, label: Suomi, widget: text }
+      - { name: hero_image, label: "Huvudbild", widget: image }
+      - name: hero_alt
+        label: "Bildbeskrivning, huvudbild"
+        widget: object
+        hint: "Beskriv bilden för den som inte kan se den."
+        fields:
+          - { name: sv, label: Svenska, required: false }
+          - { name: fi, label: Suomi, required: false }
+      - name: featured_text
+        label: "Text bredvid videon"
+        widget: object
+        hint: "Videon är den första i listan under Video."
+        fields:
+          - { name: sv, label: Svenska, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+          - { name: fi, label: Suomi, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+      - name: strip
+        label: "Bilder längst ner"
+        label_singular: "bild"
+        widget: list
+        min: 3
+        max: 3
+        collapsed: auto
+        thumbnail: image
+        fields:
+          - { name: image, label: "Bild", widget: image }
+          - name: alt
+            label: "Bildbeskrivning"
+            widget: object
+            hint: "Beskriv bilden för den som inte kan se den."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+  - name: news
+    label: "Aktuellt"
+    file: _data/news.yml
+    fields:
+      - { name: show, label: "Visa Aktuellt på startsidan", widget: boolean, required: false, hint: "Avstängt döljer hela avsnittet. Inläggen sparas ändå." }
+      - name: items
+        label: "Inlägg"
+        label_singular: "inlägg"
+        widget: list
+        required: false
+        collapsed: auto
+        summary: "{{when.sv}}: {{title.sv}}"
+        fields:
+          - name: when
+            label: "När"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - name: title
+            label: "Rubrik"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - name: text
+            label: "Text"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska, widget: text }
+              - { name: fi, label: Suomi, widget: text }
+  - name: bio
+    label: "Biografi"
+    file: _data/bio.yml
+    fields:
+      - name: text_1
+        label: "Text, början"
+        widget: object
+        fields:
+          - { name: sv, label: Svenska, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+          - { name: fi, label: Suomi, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+      - name: photos_pair
+        label: "Två bilder sida vid sida"
+        label_singular: "bild"
+        widget: list
+        min: 2
+        max: 2
+        collapsed: auto
+        thumbnail: image
+        fields:
+          - { name: image, label: "Bild", widget: image }
+          - name: alt
+            label: "Bildbeskrivning"
+            widget: object
+            hint: "Beskriv bilden för den som inte kan se den."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+          - name: caption
+            label: "Bildtext"
+            widget: object
+            hint: "Visas under bilden. Kan lämnas tom."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+      - name: text_2
+        label: "Text, mitten"
+        widget: object
+        fields:
+          - { name: sv, label: Svenska, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+          - { name: fi, label: Suomi, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+      - name: photo_wide
+        label: "Bred bild"
+        widget: object
+        fields:
+          - { name: image, label: "Bild", widget: image }
+          - name: alt
+            label: "Bildbeskrivning"
+            widget: object
+            hint: "Beskriv bilden för den som inte kan se den."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+          - name: caption
+            label: "Bildtext"
+            widget: object
+            hint: "Visas under bilden. Kan lämnas tom."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+      - name: text_3
+        label: "Text, slutet"
+        widget: object
+        fields:
+          - { name: sv, label: Svenska, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+          - { name: fi, label: Suomi, widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+  - name: videos
+    label: "Video"
+    file: _data/videos.yml
+    fields:
+      - name: items
+        label: "Videor"
+        label_singular: "video"
+        widget: list
+        hint: "Den första videon visas också på startsidan. Dra för att ändra ordning."
+        collapsed: auto
+        summary: "{{title.sv}}"
+        thumbnail: thumbnail
+        fields:
+          - name: youtube_id
+            label: "YouTube-id"
+            hint: "De elva tecknen i videons adress, t.ex. nYvQSebytp8 i youtu.be/nYvQSebytp8."
+            pattern: ["^[A-Za-z0-9_-]{11}$", "Klistra in bara de elva tecknen, inte hela adressen."]
+          - name: thumbnail
+            label: "Miniatyrbild"
+            widget: image
+            required: false
+            hint: "Ladda upp en bild. Lämnas fältet tomt hämtas bilden från YouTube."
+            media_folder: /assets/images/video
+            public_folder: /assets/images/video
+          - name: title
+            label: "Titel"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - name: subtitle
+            label: "Undertitel"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+  - name: gallery
+    label: "Bilder"
+    file: _data/gallery.yml
+    fields:
+      - name: items
+        label: "Bilder"
+        label_singular: "bild"
+        widget: list
+        hint: "Rutnätet har tre bilder per rad, så 3, 6, 9 eller 12 bilder ger jämna rader."
+        collapsed: auto
+        thumbnail: image
+        fields:
+          - { name: image, label: "Bild", widget: image }
+          - name: alt
+            label: "Bildbeskrivning"
+            widget: object
+            hint: "Beskriv bilden för den som inte kan se den."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+          - name: caption
+            label: "Bildtext"
+            widget: object
+            hint: "Visas under bilden. Kan lämnas tom."
+            fields:
+              - { name: sv, label: Svenska, required: false }
+              - { name: fi, label: Suomi, required: false }
+          - { name: crop, label: "Beskärning", required: false, hint: "Vilken del av bilden som syns i den fyrkantiga rutan: vågrätt och lodrätt, t.ex. 50% 30%. Tomt ger mitten." }
+  - name: cv
+    label: "CV"
+    file: _data/cv.yml
+    fields:
+      - name: roles
+        label: "Roller"
+        label_singular: "roll"
+        widget: list
+        collapsed: auto
+        summary: "{{year}} {{role.sv}}, {{work.sv}}"
+        fields:
+          - { name: year, label: "År" }
+          - name: role
+            label: "Roll"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - name: work
+            label: "Verk"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - { name: composer, label: "Tonsättare", required: false }
+          - name: venue
+            label: "Scen"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - { name: director, label: "Regi", required: false }
+          - { name: conductor, label: "Dirigent", required: false }
+      - name: concerts
+        label: "Solist i konsert och kyrka"
+        label_singular: "konsert"
+        widget: list
+        collapsed: auto
+        summary: "{{year}} {{work.sv}}"
+        fields:
+          - { name: year, label: "År" }
+          - name: work
+            label: "Verk"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - { name: composer, label: "Tonsättare", required: false }
+          - name: venue
+            label: "Plats"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - { name: conductor, label: "Dirigent", required: false }
+      - name: chorus
+        label: "Operakorist"
+        label_singular: "engagemang"
+        widget: list
+        collapsed: auto
+        summary: "{{year}} {{house.sv}}"
+        fields:
+          - { name: year, label: "År" }
+          - name: house
+            label: "Operahus"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+      - name: education
+        label: "Utbildning"
+        label_singular: "utbildning"
+        widget: list
+        collapsed: auto
+        summary: "{{year}} {{school}}"
+        fields:
+          - { name: year, label: "År" }
+          - name: subject
+            label: "Ämne"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+          - { name: school, label: "Skola" }
+      - { name: teachers, label: "Pedagoger" }
+      - name: masterclasses
+        label: "Masterclasser"
+        label_singular: "masterclass"
+        widget: list
+        collapsed: auto
+        summary: "{{year}} {{teacher}}"
+        fields:
+          - { name: year, label: "År" }
+          - { name: teacher, label: "Lärare" }
+          - name: place
+            label: "Plats"
+            widget: object
+            fields:
+              - { name: sv, label: Svenska }
+              - { name: fi, label: Suomi }
+  - name: settings
+    label: "Inställningar"
+    file: _data/settings.yml
+    fields:
+      - { name: email, label: "E-post" }
+      - { name: phone, label: "Telefon", hint: "Som det ska visas, t.ex. +358 40 745 6054." }
+      - { name: phone_link, label: "Telefon för länken", hint: "Samma nummer utan mellanslag." }
+      - name: cv_pdf
+        label: "CV att ladda ner (PDF)"
+        widget: object
+        fields:
+          - { name: sv, label: Svenska, widget: file, accept: "application/pdf,.pdf", media_folder: /assets/cv, public_folder: /assets/cv }
+          - { name: fi, label: Suomi, widget: file, accept: "application/pdf,.pdf", media_folder: /assets/cv, public_folder: /assets/cv }

@@ -1,4 +1,6 @@
 {%- assign t = site.data.labels[page.lang] -%}
-{%- if include.director != '' or include.conductor != '' -%}
-<span class="cv-credits">{% if include.director != '' %}{{ t.director }}: {{ include.director }}{% endif %}{% if include.director != '' and include.conductor != '' %} · {% endif %}{% if include.conductor != '' %}{{ t.conductor }}: {{ include.conductor }}{% endif %}</span>
+{%- assign director = include.director | default: '' -%}
+{%- assign conductor = include.conductor | default: '' -%}
+{%- if director != '' or conductor != '' -%}
+<span class="cv-credits">{% if director != '' %}{{ t.director }}: {{ director }}{% endif %}{% if director != '' and conductor != '' %} · {% endif %}{% if conductor != '' %}{{ t.conductor }}: {{ conductor }}{% endif %}</span>
 {%- endif -%}

@@ -12,7 +12,7 @@ layout: default
     <p class="actions"><a class="btn" href="{{ site.data.routes.bio[page.lang] | relative_url }}">{{ t.read_bio }}</a> <a class="btn btn--ghost" href="{{ site.data.routes.cv[page.lang] | relative_url }}">{{ t.see_cv }}</a></p>
   </div>
 </section>
-{%- if site.data.settings.show_news %}
+{%- if site.data.news.show %}
 <section class="news">
   <h2>{{ t.news }}</h2>
   <ul class="news-list">

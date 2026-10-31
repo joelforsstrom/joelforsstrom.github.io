@@ -17,7 +17,7 @@ layout: default
   <h2>{{ t.photos }}</h2>
   <div class="gallery-grid">
     {%- for p in site.data.gallery.items %}
-    <a class="gallery-item" href="{{ p.image | relative_url }}" data-cropped="true" data-caption="{{ p.caption[page.lang] | escape }}"{% if p.crop %} style="--pos: {{ p.crop }}"{% endif %}><img src="{{ p.image | relative_url }}" alt="{{ p.alt[page.lang] | escape }}"></a>
+    <a class="gallery-item" href="{{ p.image | relative_url }}" data-cropped="true" data-caption="{{ p.caption[page.lang] | escape }}"{% if p.crop and p.crop != '' %} style="--pos: {{ p.crop }}"{% endif %}><img src="{{ p.image | relative_url }}" alt="{{ p.alt[page.lang] | escape }}"></a>
     {%- endfor %}
   </div>
 </section>

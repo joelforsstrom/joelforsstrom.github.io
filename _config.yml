@@ -5,7 +5,13 @@ repository: joelforsstrom/joelforsstrom.github.io
 markdown: kramdown
 plugins:
   - jekyll-sitemap
+defaults:
+  - scope:
+      path: admin
+    values:
+      sitemap: false
 exclude:
+  - docs
   - README.md
   - Gemfile
   - Gemfile.lock

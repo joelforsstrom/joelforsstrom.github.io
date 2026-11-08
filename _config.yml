@@ -2,6 +2,11 @@ title: Joel Forsström
 url: https://joelforsstrom.com
 baseurl: ""
 repository: joelforsstrom/joelforsstrom.github.io
+# PostHog analytics (cookieless, page views only). The project key is public by design.
+# Leave key empty to turn analytics off. US projects use https://us.i.posthog.com.
+posthog:
+  key: ""
+  api_host: https://eu.i.posthog.com
 markdown: kramdown
 plugins:
   - jekyll-sitemap

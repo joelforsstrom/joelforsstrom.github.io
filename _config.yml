@@ -5,7 +5,7 @@ repository: joelforsstrom/joelforsstrom.github.io
 # PostHog analytics (cookieless, page views only). The project key is public by design.
 # Leave key empty to turn analytics off. US projects use https://us.i.posthog.com.
 posthog:
-  key: ""
+  key: "phc_D85ewNA7iZivnHVbmNgeGWoiCo4fPj8kZQw4mfBEgpSe"
   api_host: https://eu.i.posthog.com
 markdown: kramdown
 plugins:
